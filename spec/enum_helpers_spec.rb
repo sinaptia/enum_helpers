@@ -3,7 +3,6 @@
 require 'active_record'
 
 class User < ActiveRecord::Base
-  extend EnumHelpers
   enum role: [ :admin, :default, :guest ]
   enum_helpers :role
 end

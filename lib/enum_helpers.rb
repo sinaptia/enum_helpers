@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "enum_helpers/activerecord"
 require_relative "enum_helpers/version"
 
 module EnumHelpers
