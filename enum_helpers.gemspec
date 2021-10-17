@@ -35,6 +35,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails-i18n"
 
+  spec.add_development_dependency "activerecord"
+
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
 end
