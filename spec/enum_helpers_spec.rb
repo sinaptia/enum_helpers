@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-require 'active_record'
-
-class User < ActiveRecord::Base
-  extend EnumHelpers
-  enum role: [ :admin, :default, :guest ]
-  enum_helpers :role
-end
-
 RSpec.describe EnumHelpers do
   it "has a version number" do
     expect(EnumHelpers::VERSION).not_to be nil
   end
 
-  it "adds the _options method to the class that uses it" do
-    expect(User.methods).to include :role_options
+  context "in the class context" do
+    it "adds the _options method" do
+      expect(User).to respond_to :role_options
+    end
+  end
+
+  context "in the instance context" do
+    it "adds the _name method" do
+      expect(User.new).to respond_to :role_name
+    end
   end
 end

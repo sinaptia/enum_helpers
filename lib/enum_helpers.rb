@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
+require "active_record"
+
 require_relative "enum_helpers/version"
 
 module EnumHelpers
-  class Error < StandardError; end
-
   def enum_helpers(column)
-
     define_method :"#{column}_name" do
       I18n.t("activerecord.enums.#{model_name.i18n_key}.#{column}.#{send(column)}") if send(column).present?
     end
@@ -16,3 +15,5 @@ module EnumHelpers
     end
   end
 end
+
+ActiveRecord::Base.send :extend, EnumHelpers
