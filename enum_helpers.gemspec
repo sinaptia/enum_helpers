@@ -3,15 +3,15 @@
 require_relative "lib/enum_helpers/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "enum_helpers"
-  spec.version       = EnumHelpers::VERSION
-  spec.authors       = ["Lucas Belenda"]
-  spec.email         = ["lbelenda@gmail.com"]
+  spec.name = "enum_helpers"
+  spec.version = EnumHelpers::VERSION
+  spec.authors = ["Lucas Belenda"]
+  spec.email = ["lbelenda@gmail.com"]
 
-  spec.summary       = "Enum helpers"
-  spec.description   = "tool that helps to have nice enums"
-  spec.homepage      = "https://sinaptia.dev"
-  spec.license       = "MIT"
+  spec.summary = "Enum helpers"
+  spec.description = "tool that helps to have nice enums"
+  spec.homepage = "https://sinaptia.dev"
+  spec.license = "MIT"
   spec.required_ruby_version = ">= 2.4.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
@@ -26,17 +26,10 @@ Gem::Specification.new do |spec|
       (f == __FILE__) || f.match(%r{\A(?:(?:test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
     end
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.bindir = "exe"
+  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
-
-  spec.add_dependency "rails-i18n"
-
-  spec.add_development_dependency "activerecord"
-
-  # For more information and examples about making a new gem, checkout our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency "activerecord"
+  spec.add_dependency "i18n"
 end
