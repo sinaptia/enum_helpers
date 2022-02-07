@@ -27,7 +27,6 @@ Let's take as example a model called `user.rb` that has an enumerable that defin
 
 ```ruby
 class User < ApplicationRecord
-  extend EnumHelpers
 
   enum role: {default: 0, admin: 1, guest: 2}
   enum_helpers :role
